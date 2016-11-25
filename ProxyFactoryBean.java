@@ -1,4 +1,4 @@
-#ProxyFactoryBean类实现
+#ProxyFactoryBean类实现,核心是getProxy利用Proxy类的静态方法newProxyInstance创建代理对象，覆盖了invoke方法，利用InvocationHandler处理方法调用。invoke方法中间插入了Advice实现类。
 
 package Aopproxy;
 
