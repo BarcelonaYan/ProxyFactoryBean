@@ -1,4 +1,6 @@
-# BeanFactory类实现
+# BeanFactory类实现，先获取配置文件中需要创建的类的名字，然后先调用不带参数的构造方法创建一个实例对象（配置中的要求创建的类必须是JavaBean，
+否则不一定具有不带参数的构造方法），通过实例对象判断是否是ProxyFactoryBean对象，如果是，则转换成ProxyFactoryBean对象，
+调用ProxyFactoryBean类中方法getProxy来创建代理对象。
 
 package Aopproxy;
 
